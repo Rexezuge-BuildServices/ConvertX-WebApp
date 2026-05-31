@@ -10,4 +10,4 @@ ENV WEBSITES_PORT=3000
 
 ENTRYPOINT ["/.AppServiceLauncher/launcher.sh"]
 
-CMD ["bun", "src/index.ts"]
+CMD ["bun", "run", "dist/src/index.js"]
