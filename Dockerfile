@@ -4,6 +4,8 @@ USER root:root
 
 RUN (groupadd nobody || true) && (useradd -g nobody nobody || true)
 
+COPY overlay/ /
+
 COPY --from=rexezugebuild/appservicelauncher /.AppServiceLauncher /.AppServiceLauncher
 
 ENV WEBSITES_PORT=3000
