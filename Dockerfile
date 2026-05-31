@@ -2,7 +2,7 @@ FROM c4illin/convertx:latest
 
 USER root:root
 
-RUN groupadd nobody && useradd -g nobody nobody
+RUN (groupadd nobody || true) && (useradd -g nobody nobody || true)
 
 COPY --from=rexezugebuild/appservicelauncher /.AppServiceLauncher /.AppServiceLauncher
 
