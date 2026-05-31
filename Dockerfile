@@ -8,8 +8,6 @@ COPY overlay/ /
 
 COPY --from=rexezugebuild/appservicelauncher /.AppServiceLauncher /.AppServiceLauncher
 
-ENV WEBSITES_PORT=3000
-
 ENTRYPOINT ["/.AppServiceLauncher/launcher.sh"]
 
 CMD ["bun", "run", "dist/src/index.js"]
