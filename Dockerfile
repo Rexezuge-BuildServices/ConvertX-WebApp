@@ -2,6 +2,8 @@ FROM c4illin/convertx:latest
 
 USER root:root
 
+RUN groupadd nobody && useradd -g nobody nobody
+
 COPY --from=rexezugebuild/appservicelauncher /.AppServiceLauncher /.AppServiceLauncher
 
 ENV WEBSITES_PORT=3000
